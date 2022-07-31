@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".User_Create">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--전체 감싸고 있는 부분-->
+        <LinearLayout
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--상단바-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/black"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="FRIENDS DIARY"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"></TextView>
+
+            </LinearLayout>
+
+            <!--프로필 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="76dp"
+                        android:background="@drawable/main_plus_bt"
+                        android:elevation="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toStartOf="@+id/et_user_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_user_name"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="121dp"
+                        android:backgroundTint="#2E2E2E"
+                        android:hint="이름 입력"
+                        android:gravity="top"
+                        android:maxLength="4"
+                        android:textColor="#252525"
+                        android:textColorHighlight="#B5B5B5"
+                        android:textColorHint="#ACACAC"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ll_profile"
+                        app:layout_constraintTop_toTopOf="parent"></EditText>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!--MBTI 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="510dp"
+                android:background="#9F9D9D"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <!--LIKE 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                android:background="#717171"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <!--HATE 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                android:background="#474747"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <!--한줄 소개 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:background="#393939"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <!--CREATE 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
