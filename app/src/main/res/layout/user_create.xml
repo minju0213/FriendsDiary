@@ -87,16 +87,338 @@
             <!--MBTI 부분-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="510dp"
-                android:background="#9F9D9D"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="MBTI"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="17dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="27dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="E"
+                        android:textColor="#686868"
+                        android:textSize="24dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/btn_ENFP"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/mbti_bt"
+                            android:fontFamily="@font/inter_medium"
+                            android:gravity="center"
+                            android:paddingTop="2dp"
+                            android:text="ENFP"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/btn_ENFJ"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/mbti_bt"
+                            android:fontFamily="@font/inter_medium"
+                            android:gravity="center"
+                            android:paddingTop="2dp"
+                            android:text="ENFJ"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/btn_ENTP"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/mbti_bt"
+                            android:fontFamily="@font/inter_medium"
+                            android:gravity="center"
+                            android:paddingTop="2dp"
+                            android:text="ENTP"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/btn_ENTJ"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/mbti_bt"
+                            android:fontFamily="@font/inter_medium"
+                            android:gravity="center"
+                            android:paddingTop="2dp"
+                            android:text="ENTJ"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp">
+
+                        <TextView
+                            android:id="@+id/btn_ESFP"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:background="@drawable/mbti_bt"
+                            android:text="ESFP"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp"
+                            android:paddingTop="2dp"/>
+
+                        <TextView
+                            android:id="@+id/btn_ESFJ"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:background="@drawable/mbti_bt"
+                            android:text="ESFJ"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp"
+                            android:paddingTop="2dp"/>
+
+                        <TextView
+                            android:id="@+id/btn_ESTJ"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:background="@drawable/mbti_bt"
+                            android:text="ESTJ"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp"
+                            android:paddingTop="2dp"/>
+
+                        <TextView
+                            android:id="@+id/btn_ESTP"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="7dp"
+                            android:background="@drawable/mbti_bt"
+                            android:text="ESTP"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="#7a7a7a"
+                            android:textSize="20dp"
+                            android:paddingTop="2dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="27dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="I"
+                            android:textColor="#686868"
+                            android:textSize="24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:id="@+id/btn_INFP"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/mbti_bt"
+                                android:fontFamily="@font/inter_medium"
+                                android:gravity="center"
+                                android:paddingTop="2dp"
+                                android:text="INFP"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/btn_INFJ"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/mbti_bt"
+                                android:fontFamily="@font/inter_medium"
+                                android:gravity="center"
+                                android:paddingTop="2dp"
+                                android:text="INFJ"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/btn_INTP"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/mbti_bt"
+                                android:fontFamily="@font/inter_medium"
+                                android:gravity="center"
+                                android:paddingTop="2dp"
+                                android:text="INTP"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/btn_INTJ"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/mbti_bt"
+                                android:fontFamily="@font/inter_medium"
+                                android:gravity="center"
+                                android:paddingTop="2dp"
+                                android:text="INTJ"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="20dp">
+
+                            <TextView
+                                android:id="@+id/btn_ISFP"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:background="@drawable/mbti_bt"
+                                android:text="ISFP"
+                                android:fontFamily="@font/inter_medium"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp"
+                                android:paddingTop="2dp"/>
+
+                            <TextView
+                                android:id="@+id/btn_ISFJ"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:background="@drawable/mbti_bt"
+                                android:text="ISFJ"
+                                android:fontFamily="@font/inter_medium"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp"
+                                android:paddingTop="2dp"/>
+
+                            <TextView
+                                android:id="@+id/btn_ISTJ"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:background="@drawable/mbti_bt"
+                                android:text="ISTJ"
+                                android:fontFamily="@font/inter_medium"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp"
+                                android:paddingTop="2dp"/>
+
+                            <TextView
+                                android:id="@+id/btn_ISTP"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:background="@drawable/mbti_bt"
+                                android:text="ISTP"
+                                android:fontFamily="@font/inter_medium"
+                                android:textColor="#7a7a7a"
+                                android:textSize="20dp"
+                                android:paddingTop="2dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
             </LinearLayout>
 
             <!--LIKE 부분-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="420dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="#717171"
                 android:orientation="vertical">
 
@@ -105,7 +427,8 @@
             <!--HATE 부분-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="420dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="#474747"
                 android:orientation="vertical">
 
@@ -114,7 +437,8 @@
             <!--한줄 소개 부분-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="320dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="#393939"
                 android:orientation="vertical">
 
@@ -128,6 +452,7 @@
                 android:orientation="vertical">
 
             </LinearLayout>
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
