@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "765141695346",
+    "project_id": "friends-diary-f1860",
+    "storage_bucket": "friends-diary-f1860.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765141695346:android:7015857b295c48085b7beb",
+        "android_client_info": {
+          "package_name": "com.example.friendsdiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765141695346-fkd9pagl7g11p73sfma06kknpcqf5t5b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.friendsdiary",
+            "certificate_hash": "fde53ae9de06de2143d6acc012e44aa56ab020c2"
+          }
+        },
+        {
+          "client_id": "765141695346-97rapsgvv36k89i6k6h87nrjg3gm2joq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAERNca_XAvTvKnZzTx_UaDZUS8LIQWIls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765141695346-97rapsgvv36k89i6k6h87nrjg3gm2joq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
