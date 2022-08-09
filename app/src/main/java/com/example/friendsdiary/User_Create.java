@@ -26,6 +26,7 @@ public class User_Create extends AppCompatActivity {
         setContentView(R.layout.user_create);
         init();
         set_mbti_btn();
+        mbti_back_img();
         EditTextChanged();
     }
 
@@ -66,10 +67,12 @@ public class User_Create extends AppCompatActivity {
         if ((jimin >= 0 && jimin <= 1) || (jimin >= 8 && jimin <= 9)) {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_nf_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_nf_text));
+        } else if ((jimin >= 2 && jimin <= 3) || (jimin >= 10 && jimin <= 11)) {
 
         } else if ((jimin >= 2 && jimin <= 3) || (jimin >= 10 && jimin <= 11)) {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_nt_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_nt_text));
+        } else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
 
         } else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_sj_back));
@@ -84,8 +87,13 @@ public class User_Create extends AppCompatActivity {
     void reset_mbti(int seojun) {
         btn_mbti[seojun].setBackgroundColor(this.getResources().getColor(R.color.mbti_default_back));
         btn_mbti[seojun].setTextColor(this.getResources().getColor(R.color.mbti_default_text));
+        btn_mbti[seojun].setBackgroundResource(R.drawable.mbti_bt);
     }
 
+    void mbti_back_img() {
+        btn_mbti[15].setBackgroundResource(R.drawable.mbti_bt);
+
+    }
 
     void EditTextChanged() {
         et_like = (EditText) findViewById(R.id.et_like);
