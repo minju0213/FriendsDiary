@@ -55,7 +55,6 @@ public class User_Create extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     reset_mbti(select_mbti_num);
-                    mbti_back_img(finalI);
                     select_mbti(finalI);
                     select_mbti_num = finalI;
                 }
@@ -70,10 +69,9 @@ public class User_Create extends AppCompatActivity {
         } else if ((jimin >= 2 && jimin <= 3) || (jimin >= 10 && jimin <= 11)) {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_nt_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_nt_text));
-        }  else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
+        } else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_sj_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_sj_text));
-
         } else {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_sp_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_sp_text));
