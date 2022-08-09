@@ -26,7 +26,6 @@ public class User_Create extends AppCompatActivity {
         setContentView(R.layout.user_create);
         init();
         set_mbti_btn();
-        mbti_back_img();
         EditTextChanged();
     }
 
@@ -56,6 +55,7 @@ public class User_Create extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     reset_mbti(select_mbti_num);
+                    mbti_back_img(finalI);
                     select_mbti(finalI);
                     select_mbti_num = finalI;
                 }
@@ -68,13 +68,9 @@ public class User_Create extends AppCompatActivity {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_nf_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_nf_text));
         } else if ((jimin >= 2 && jimin <= 3) || (jimin >= 10 && jimin <= 11)) {
-
-        } else if ((jimin >= 2 && jimin <= 3) || (jimin >= 10 && jimin <= 11)) {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_nt_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_nt_text));
-        } else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
-
-        } else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
+        }  else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
             btn_mbti[jimin].setBackgroundColor(this.getResources().getColor(R.color.mbti_sj_back));
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_sj_text));
 
@@ -90,10 +86,11 @@ public class User_Create extends AppCompatActivity {
         btn_mbti[seojun].setBackgroundResource(R.drawable.mbti_bt);
     }
 
-    void mbti_back_img() {
-        btn_mbti[15].setBackgroundResource(R.drawable.mbti_bt);
-
+    void mbti_back_img(int i) {
+        btn_mbti[i].setBackgroundResource(R.drawable.mbti_bt);
     }
+
+
 
     void EditTextChanged() {
         et_like = (EditText) findViewById(R.id.et_like);
