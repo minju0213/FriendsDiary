@@ -30,9 +30,12 @@
             android:name=".User_Create"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-
         </activity>
 
+        <activity android:name=".Friends_Froile"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Friends_Froile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--전체 감싸고 있는 부분-->
+        <LinearLayout
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--상단바-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/black"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="FRIENDS DIARY"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"></TextView>
+
+            </LinearLayout>
+
+            <!--프로필 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_profile"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/main_plus_bt"
+                        android:elevation="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="125dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="120dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:gravity="center"
+                        android:text="박민주"
+                        android:textColor="#636363"
+                        android:textSize="26dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="145dp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/friends_froile_cake_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="280dp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/friends_froile_person_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!--구분선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#E8E8E8"
+                android:orientation="horizontal"></LinearLayout>
+
+
+            <!--MBTI 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="17dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="MBTI"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_mbti_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@color/black">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_mbti"
+                            android:layout_width="130dp"
+                            android:layout_height="65dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="ISTJ"
+                            android:textColor="@color/white"
+                            android:textSize="47dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                        <TextView
+                            android:layout_width="220dp"
+                            android:layout_height="52dp"
+                            android:layout_marginTop="19dp"
+                            android:layout_marginEnd="17dp"
+                            android:fontFamily="@font/inter_extrabold"
+                            android:gravity="right"
+                            android:text="현실주의자"
+                            android:textColor="@color/white"
+                            android:textSize="33dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--구분선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="17dp"
+                android:background="#E8E8E8"
+                android:orientation="horizontal"></LinearLayout>
+
+            <!--LIKE 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="410dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="411dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_like"
+                            android:layout_width="50dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="LIKE"
+                            android:textColor="@color/black"
+                            android:textSize="23dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+
+                        <View
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/friends_froile_help_icon"></View>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_like_bg"
+                        android:layout_width="360dp"
+                        android:layout_height="280dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginEnd="28dp"
+                        android:background="#F4F4F4"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="330dp"
+                            android:layout_height="250dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tv_like_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/inter_thin"
+                                    android:text="칸 넘어도 스크롤 해서 볼 수 있음"
+                                    android:textColor="#484848"
+                                    android:textSize="20dp">
+
+                                </TextView>
+
+                            </ScrollView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!--구분선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#E8E8E8"
+                android:orientation="horizontal"></LinearLayout>
+
+            <!--HATE 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="410dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_hate"
+                        android:layout_width="411dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_hate"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="HATE"
+                            android:textColor="@color/black"
+                            android:textSize="23dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="360dp"
+                        android:layout_height="280dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginEnd="28dp"
+                        android:background="#F4F4F4"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="330dp"
+                            android:layout_height="250dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tv_hate_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/inter_thin"
+                                    android:text="22"
+                                    android:textColor="#484848"
+                                    android:textSize="20dp">
+
+                                </TextView>
+
+                            </ScrollView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

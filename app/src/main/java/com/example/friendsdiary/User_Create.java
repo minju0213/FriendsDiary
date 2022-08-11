@@ -1,24 +1,37 @@
 package com.example.friendsdiary;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
+
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
+
+import com.google.firebase.firestore.FirebaseFirestore;
+
+
 
 public class User_Create extends AppCompatActivity {
+
+    private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
 
     TextView btn_mbti[] = new TextView[16];
     int select_mbti_num = 0;
 
+    AppCompatButton btn_creat;
+
     EditText et_user_name, et_like, et_hate, et_introduction;
 
     TextView tv_like_length, tv_hate_length, tv_introduction_length;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,9 +40,51 @@ public class User_Create extends AppCompatActivity {
         init();
         set_mbti_btn();
         EditTextChanged();
+        firebase();
+
     }
 
+
+    void firebase() {
+        btn_creat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast 메세지 추가와 각 변수에 EditText 값 할당
+                Toast.makeText(User_Create.this, "데이터베이스에 전송!", Toast.LENGTH_SHORT).show();
+
+                String name = et_user_name.getText().toString();
+                String like = et_like.getText().toString();
+                String hate = et_hate.getText().toString();
+                String introduction = et_introduction.getText().toString();
+
+                sendToFirebase(name,like,hate,introduction);
+
+            }
+        });
+
+    }
+
+    void sendToFirebase(String name,String like,String hate,String introduction){
+        User_Create_Adapter usa = new User_Create_Adapter(name,like,hate,introduction);
+        firebaseFirestore.collection("friends")
+                .document(name)
+                .set(usa);
+        Log.d("gpgp", "sendToFirebase: ");
+    }
+
+
+
     void init() {
+        et_user_name = (EditText) findViewById(R.id.name_text);
+        btn_creat = (AppCompatButton) findViewById(R.id.btn_creat);
+        et_like = (EditText) findViewById(R.id.like_text);
+        tv_like_length = (TextView) findViewById(R.id.tv_like_length);
+        et_hate = (EditText) findViewById(R.id.hate_text);
+        tv_hate_length = (TextView) findViewById(R.id.tv_hate_length);
+        et_introduction = (EditText) findViewById(R.id.introduction_text);
+        tv_introduction_length = (TextView) findViewById(R.id.tv_introduction_length);
+
+
         btn_mbti[0] = findViewById(R.id.btn_ENFP);
         btn_mbti[1] = findViewById(R.id.btn_ENFJ);
         btn_mbti[2] = findViewById(R.id.btn_ENTP);
@@ -71,7 +126,7 @@ public class User_Create extends AppCompatActivity {
             btn_mbti[jimin].setBackgroundResource(R.drawable.mbti_nt_back);
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_nt_text));
 
-        }  else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
+        } else if ((jimin >= 5 && jimin <= 6) || (jimin >= 13 && jimin <= 14)) {
             btn_mbti[jimin].setBackgroundResource(R.drawable.mbti_sj_back);
             btn_mbti[jimin].setTextColor(this.getResources().getColor(R.color.mbti_sj_text));
 
@@ -88,9 +143,6 @@ public class User_Create extends AppCompatActivity {
 
 
     void EditTextChanged() {
-        et_like = (EditText) findViewById(R.id.et_like);
-        tv_like_length = (TextView) findViewById(R.id.tv_like_length);
-
         et_like.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -108,8 +160,6 @@ public class User_Create extends AppCompatActivity {
             }
         });
 
-        et_hate = (EditText) findViewById(R.id.et_hate);
-        tv_hate_length = (TextView) findViewById(R.id.tv_hate_length);
 
         et_hate.addTextChangedListener(new TextWatcher() {
             @Override
@@ -127,9 +177,6 @@ public class User_Create extends AppCompatActivity {
                 tv_hate_length.setText(s.length() + "/100");   //글자수 TextView에 보여주기.
             }
         });
-
-        et_introduction = (EditText) findViewById(R.id.et_introduction);
-        tv_introduction_length = (TextView) findViewById(R.id.tv_introduction_length);
 
 
         et_introduction.addTextChangedListener(new TextWatcher() {
