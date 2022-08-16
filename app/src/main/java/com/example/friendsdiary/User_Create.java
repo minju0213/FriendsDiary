@@ -104,6 +104,7 @@ public class User_Create extends AppCompatActivity {
     }
 
     void set_mbti_btn() {
+        //실행을 바로 하는게 아니라 기능만 만들어두는 역할
         for (int i = 0; i < btn_mbti.length; i++) {
             int finalI = i;
             btn_mbti[finalI].setOnClickListener(new View.OnClickListener() {
